@@ -33,6 +33,7 @@ const mainnetGwei = 21;
 
 function mnemonic() {
   try {
+    // Put private key in mnemonic.txt under hardhat root folder
     return fs.readFileSync("./mnemonic.txt").toString().trim();
   } catch (e) {
     if (defaultNetwork !== "localhost") {
